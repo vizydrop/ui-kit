@@ -1,6 +1,6 @@
 {
   "name": "@vizydrop/styles-variables",
-  "version": "0.0.6-alpha.0",
+  "version": "0.0.5",
   "private": false,
   "description": "Vizydrop UI kit - styles variables",
   "license": "MIT",
@@ -9,7 +9,8 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "jest",
-    "lint": "../../node_modules/.bin/eslint --quiet --ext .js,.jsx ./"
+    "lint": "../../node_modules/.bin/eslint --quiet --ext .js,.jsx ./",
+    "prepublishOnly": "yarn test && yarn lint"
   },
   "peerDependencies": {
     "prop-types": "^15.7.0",
