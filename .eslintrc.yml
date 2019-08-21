@@ -1,0 +1,13 @@
+extends: "@vizydrop/eslint-config-vizydrop/client"
+plugins:
+  - react-hooks
+settings:
+  import/resolver:
+    node:
+      moduleDirectory:
+        - node_modules
+        - modules
+rules:
+  react/button-has-type: 1
+  react-hooks/rules-of-hooks: 2
+  react-hooks/exhaustive-deps: 2
