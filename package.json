@@ -7,7 +7,7 @@
   "scripts": {
     "test": "./node_modules/.bin/lerna run test",
     "lint": "./node_modules/.bin/lerna run lint",
-    "package:publish": "./node_modules/.bin/lerna publish"
+    "publish:release": "yarn lint && yarn test && ./node_modules/.bin/lerna publish"
   },
   "workspaces": [
     "packages/*"

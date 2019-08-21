@@ -9,8 +9,7 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "jest",
-    "lint": "../../node_modules/.bin/eslint --quiet --ext .js,.jsx ./",
-    "prepublishOnly": "yarn test && yarn lint"
+    "lint": "../../node_modules/.bin/eslint --quiet --ext .js,.jsx ./"
   },
   "peerDependencies": {
     "prop-types": "^15.7.0",
