@@ -1,11 +1,12 @@
 {
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "description": "Vizydrop UI kit",
   "repository": "https://github.com/vizydrop/ui-kit",
   "author": "Vizydrop Team",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint --quiet --ext .js,.jsx ./"
+    "lint": "./node_modules/.bin/eslint --quiet --ext .js,.jsx ./",
+    "publish": "./node_modules/.bin/lerna publish"
   },
   "workspaces": [
     "packages/*"
