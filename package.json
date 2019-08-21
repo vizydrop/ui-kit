@@ -6,7 +6,7 @@
   "author": "Vizydrop Team",
   "scripts": {
     "lint": "./node_modules/.bin/eslint --quiet --ext .js,.jsx ./",
-    "publish": "./node_modules/.bin/lerna publish --access public"
+    "publish": "./node_modules/.bin/lerna publish -- --access public"
   },
   "workspaces": [
     "packages/*"
