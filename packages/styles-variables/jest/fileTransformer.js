@@ -2,6 +2,7 @@ const {createTransformer} = require(`babel-jest`);
 const reactPreset = require(`@babel/preset-react`);
 const transformClassProperties = require(`@babel/plugin-proposal-class-properties`);
 
+
 module.exports = createTransformer({
     babelrc: false,
     presets: [
