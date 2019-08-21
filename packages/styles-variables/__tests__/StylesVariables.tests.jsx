@@ -22,6 +22,6 @@ describe(`styles variables`, () => {
                 <Component />
             </StylesVariablesProvider>,
         );
-        expect(queryByText(`#001122`)).toBeInTheDocument();
+        expect(queryByText(`#0011221`)).toBeInTheDocument();
     });
 });
