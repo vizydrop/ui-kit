@@ -1,0 +1,19 @@
+{
+  "name": "@vizydrop/styles-variables",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Vizydrop UI kit - styles variables",
+  "license": "MIT",
+  "repository": "git@github.com:vizydrop/styles-variables.git",
+  "author": "Vizydrop Team",
+  "main": "./src/index.js",
+  "peerDependencies": {
+    "prop-types": "^15.7.0",
+    "react": "^16.8.0"
+  },
+  "dependencies": {
+    "color": "3.1.2"
+  },
+  "devDependencies": {
+  }
+}
