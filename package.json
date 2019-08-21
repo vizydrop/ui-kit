@@ -1,11 +1,12 @@
 {
-  "private": false,
+  "private": true,
   "version": "0.0.1",
   "description": "Vizydrop UI kit",
   "repository": "https://github.com/vizydrop/ui-kit",
   "author": "Vizydrop Team",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint --quiet --ext .js,.jsx ./",
+    "test": "./node_modules/.bin/lerna run test",
+    "lint": "./node_modules/.bin/lerna run lint",
     "package:publish": "./node_modules/.bin/lerna publish"
   },
   "workspaces": [
@@ -17,7 +18,13 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "7.5.5",
+    "@babel/preset-env": "7.5.5",
+    "@babel/preset-react": "7.0.0",
+    "@testing-library/jest-dom": "4.0.1",
+    "@testing-library/react": "9.1.3",
     "@vizydrop/eslint-config-vizydrop": "5.1.3",
+    "babel-jest": "24.9.0",
     "eslint": "6.2.1",
     "eslint-config-airbnb": "18.0.1",
     "eslint-plugin-class-property": "1.1.0",
@@ -31,8 +38,10 @@
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-react": "7.14.3",
     "eslint-plugin-react-hooks": "1.7.0",
+    "jest": "24.9.0",
     "lerna": "3.16.4",
     "prop-types": "15.7.0",
-    "react": "16.8.0"
+    "react": "16.9.0",
+    "react-dom": "16.9.0"
   }
 }

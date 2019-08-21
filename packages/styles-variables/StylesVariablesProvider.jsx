@@ -3,24 +3,26 @@ import PropTypes from 'prop-types';
 import {calculateVariables} from './calculateVariables';
 import StylesVariablesContext from './StylesVariablesContext';
 
-const DEFAULT_STYLES_VARIABLES = calculateVariables({});
+function runVariablesCalculation(theme) {
+    return calculateVariables((theme && theme.colors) || {});
+}
 
-export default function StylesVariablesProvider(props) {
-    const [stylesVariables, setStylesVariables] = useState(DEFAULT_STYLES_VARIABLES);
+export default function StylesVariablesProvider({theme, children}) {
+    const [stylesVariables, setStylesVariables] = useState(() => runVariablesCalculation(theme));
+
     useEffect(() => {
-        const colors = props.theme && props.theme.colors;
-        const variables = calculateVariables(colors || {});
+        const variables = runVariablesCalculation(theme);
         setStylesVariables(variables);
 
         const root = document.documentElement;
         Object.entries(variables).forEach(([key, value]) => {
             root.style.setProperty(`--vzdrp-${key}`, value);
         });
-    }, [props.theme, setStylesVariables]);
+    }, [theme, setStylesVariables]);
 
     return (
         <StylesVariablesContext.Provider value={stylesVariables}>
-            {props.children}
+            {children}
         </StylesVariablesContext.Provider>
     );
 }
