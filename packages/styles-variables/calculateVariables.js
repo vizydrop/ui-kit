@@ -38,6 +38,7 @@ function calculateVariables({
     const fontWeightBold = `bold`;
     const fontWeightSemibold = `600`;
     const fontWeightRegular = `400`;
+    const fontFamilyCode = `Roboto Mono, monospace`;
     // vzd text colors ---------------------------------------
     const textColor = colorContent;
     const textColorSecondary = color(colorContent).fade(0.4).toString(); // rgba(0, 0, 0, 0.6)
@@ -152,6 +153,7 @@ function calculateVariables({
         spaceSPx,
         spaceXs,
         fontFamily,
+        fontFamilyCode,
         fontSizeS,
         fontSizeM,
         fontSizeL,
