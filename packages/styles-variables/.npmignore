@@ -1,0 +1,4 @@
+jest
+__tests__
+jest.config.js
+.npmignore
