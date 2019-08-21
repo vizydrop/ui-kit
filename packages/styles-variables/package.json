@@ -13,5 +13,8 @@
   },
   "dependencies": {
     "color": "3.1.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
