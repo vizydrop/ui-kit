@@ -9,7 +9,10 @@
     "publish": {
       "ignoreChanges": [
         "**/__tests__/**",
-        "jest/**"
+        "jest/**",
+        "jest.config.js",
+        ".npmignore",
+        ".gitignore"
       ]
     }
   }
