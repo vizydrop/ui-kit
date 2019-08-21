@@ -2,7 +2,7 @@
   "private": true,
   "version": "0.0.1",
   "description": "Vizydrop UI kit",
-  "repository": "git@github.com:vizydrop/styles-variables.git",
+  "repository": "https://github.com/vizydrop/ui-kit",
   "author": "Vizydrop Team",
   "scripts": {
     "lint": "./node_modules/.bin/eslint --quiet --ext .js,.jsx ./"

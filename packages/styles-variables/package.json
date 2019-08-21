@@ -4,7 +4,7 @@
   "private": false,
   "description": "Vizydrop UI kit - styles variables",
   "license": "MIT",
-  "repository": "git@github.com:vizydrop/styles-variables.git",
+  "repository": "https://github.com/vizydrop/ui-kit",
   "author": "Vizydrop Team",
   "main": "./src/index.js",
   "peerDependencies": {
