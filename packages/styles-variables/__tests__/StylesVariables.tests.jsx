@@ -4,6 +4,7 @@ import {render} from '@testing-library/react';
 import StylesVariablesProvider from '../StylesVariablesProvider';
 import useStylesVariables from '../useStylesVariables';
 
+
 const Component = () => {
     const {colorMain} = useStylesVariables();
     return (<div>{colorMain}</div>);
