@@ -1,6 +1,6 @@
 {
   "name": "@vizydrop/icons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "Vizydrop UI kit - icons",
   "license": "MIT",
@@ -18,7 +18,7 @@
     "react": "^16.8.0"
   },
   "devDependencies": {
-    "@vizydrop/styles-variables": "^1.0.0"
+    "@vizydrop/styles-variables": "^1.1.0"
   },
   "publishConfig": {
     "access": "public",
