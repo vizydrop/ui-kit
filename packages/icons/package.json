@@ -6,7 +6,12 @@
   "license": "MIT",
   "repository": "https://github.com/vizydrop/ui-kit",
   "author": "Vizydrop Team",
-  "scripts": {},
+  "scripts": {
+    "copy": "../../node_modules/.bin/copyfiles",
+    "clean": "../../node_modules/.bin/rimraf ./dist",
+    "build": "yarn clean && yarn copy ./.npmignore ./package.json ./dist && yarn copy -u 1 ./src/* ./dist",
+    "prepublishOnly": "yarn build"
+  },
   "peerDependencies": {
     "@vizydrop/styles-variables": "^1.0.0",
     "prop-types": "^15.7.0",
@@ -17,6 +22,6 @@
   },
   "publishConfig": {
     "access": "public",
-    "directory": "src"
+    "directory": "dist"
   }
 }
