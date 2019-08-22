@@ -9,7 +9,7 @@
   "scripts": {
     "copy": "../../node_modules/.bin/copyfiles",
     "clean": "../../node_modules/.bin/rimraf ./dist",
-    "build": "yarn clean && yarn copy ./.npmignore ./package.json ./dist && yarn copy -u 1 ./src/* ./dist",
+    "build": "yarn clean && yarn copy ./.npmignore ./package.json ./dist && yarn copy -u 1 ./src/**/* ./dist",
     "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
