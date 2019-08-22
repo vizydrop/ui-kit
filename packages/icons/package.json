@@ -1,6 +1,6 @@
 {
   "name": "@vizydrop/icons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "description": "Vizykit - icons",
   "license": "MIT",
@@ -18,7 +18,7 @@
     "react": "^16.8.0"
   },
   "devDependencies": {
-    "@vizydrop/styles-variables": "^1.1.1"
+    "@vizydrop/styles-variables": "^1.1.2"
   },
   "publishConfig": {
     "access": "public",
