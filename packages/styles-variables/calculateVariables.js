@@ -18,7 +18,7 @@ function calculateVariables({
     colorHighlight = defaultColorHighlight,
     colorMain = defaultColorMain,
     colorError = defaultColorError,
-    /* fonts color */
+    /* fonts */
     fontFamily = defaultFontFamily,
 } = {}) {
     const controlsHeightPx = 28;
@@ -126,6 +126,20 @@ function calculateVariables({
     const controlsPlaceholderColor = color(colorContent).fade(0.6).toString(); // rgba(0, 0, 0, 0.4)
     const controlsHorizontalSpace = spaceXs;
     const controlsHorizontalSpaceL = spaceS;
+    // buttons --------------------------------------------------------------
+    const buttonDefaultColor = textColor; // #000
+    const buttonDefaultBackground = `transparent`;
+    const buttonDefaultBorderColor = controlsBorderColor;
+    const buttonDefaultHoverColor = textColor; // #000
+    const buttonDefaultHoverBackground = bgObject;
+    const buttonDefaultHoverBorderColor = controlsBorderColor;
+    const buttonPrimaryColor = textColorInvert; // #fff
+    const buttonPrimaryBackground = colorVzdBrand; // #007eff
+    const buttonPrimaryBorderColor = colorVzdBrand;
+    const buttonPrimaryHoverColor = textColorInvert; // #fff
+    const buttonPrimaryHoverBackground = colorVzdBrandHover; // #0071e6
+    const buttonPrimaryHoverBorderColor = colorVzdBrandHover;
+    // rest -----------------------------------------------------------------
     const axisControlColor = color(bgSelected).desaturate(0.08).darken(0.27).toString(); // #6fd366
     const progressIndicatorBg = colorVzdBrand; // #007eff
     const progressIndicatorFunc = `cubic-bezier(0.58, 0, 0.81, 1)`;
@@ -227,6 +241,18 @@ function calculateVariables({
         controlsHeightL,
         controlsHeightXl,
         controlsLineHeight,
+        buttonDefaultColor,
+        buttonDefaultBackground,
+        buttonDefaultBorderColor,
+        buttonDefaultHoverColor,
+        buttonDefaultHoverBackground,
+        buttonDefaultHoverBorderColor,
+        buttonPrimaryColor,
+        buttonPrimaryBackground,
+        buttonPrimaryBorderColor,
+        buttonPrimaryHoverColor,
+        buttonPrimaryHoverBackground,
+        buttonPrimaryHoverBorderColor,
         popoverBoxShadow,
         popoverBackground,
         popoverOverlay,
