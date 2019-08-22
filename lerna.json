@@ -14,7 +14,7 @@
         ".npmignore",
         ".gitignore"
       ],
-      "message": "release: publish %v"
+      "message": "release: publish"
     }
   }
 }
