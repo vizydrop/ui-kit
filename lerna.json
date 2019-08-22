@@ -15,7 +15,9 @@
         "**/jest/**",
         "jest.config.js",
         ".npmignore",
-        ".gitignore"
+        ".gitignore",
+        "*.md",
+        "*.MD"
       ],
       "message": "release: publish"
     }
