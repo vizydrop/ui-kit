@@ -1,8 +1,8 @@
 {
   "private": true,
   "version": "0.0.1",
-  "description": "Vizydrop UI kit",
-  "repository": "https://github.com/vizydrop/ui-kit",
+  "description": "Vizykit",
+  "repository": "https://github.com/vizydrop/Vizykit",
   "author": "Vizydrop Team",
   "scripts": {
     "test": "./node_modules/.bin/lerna run test",

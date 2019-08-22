@@ -2,9 +2,9 @@
   "name": "@vizydrop/icons",
   "version": "1.0.2",
   "private": false,
-  "description": "Vizydrop UI kit - icons",
+  "description": "Vizykit - icons",
   "license": "MIT",
-  "repository": "https://github.com/vizydrop/ui-kit",
+  "repository": "https://github.com/vizydrop/vizykit",
   "author": "Vizydrop Team",
   "scripts": {
     "copy": "../../node_modules/.bin/copyfiles",
