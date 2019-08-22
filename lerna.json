@@ -13,7 +13,8 @@
         "jest.config.js",
         ".npmignore",
         ".gitignore"
-      ]
+      ],
+      "message": "release: publish %v"
     }
   }
 }
