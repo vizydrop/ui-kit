@@ -270,7 +270,7 @@ function calculateVariables({
 module.exports = {
     calculateVariables,
     calculateCustomCssProperties(options) {
-        return Object.entries(calculateVariables({options}))
+        return Object.entries(calculateVariables(options))
             .map(([key, value]) => [`--vzdrp-${key}`, value])
             .reduce((customProperties, [key, value]) => ({...customProperties, [key]: value}), {});
     },
