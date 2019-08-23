@@ -111,12 +111,6 @@ function calculateVariables({
     const controlsHeightL = `34px`;
     const controlsHeightXl = `42px`;
     const controlsLineHeight = `18px`;
-    const customScrollWidth = `7px`;
-    const popoverBackground = bgBody; // #fff
-    const popoverOverlay = color(bgBody).fade(0.25).toString(); // rgba(255, 255, 255, 0.75)
-    const popoverBoxShadow = boxShadowL;
-    const chartLegendWidth = `182px`;
-    const sourceFormWidth = `530px`;
     const controlsTextColor = textColor; // #000
     const controlsBg = bgBody; // #fff
     const controlsBorderRadius = borderRadius;
@@ -126,6 +120,7 @@ function calculateVariables({
     const controlsPlaceholderColor = color(colorContent).fade(0.6).toString(); // rgba(0, 0, 0, 0.4)
     const controlsHorizontalSpace = spaceXs;
     const controlsHorizontalSpaceL = spaceS;
+    const controlsHorizontalSpaceXl = spaceL;
     // buttons --------------------------------------------------------------
     const buttonDefaultColor = textColor; // #000
     const buttonDefaultBackground = `transparent`;
@@ -139,7 +134,14 @@ function calculateVariables({
     const buttonPrimaryHoverColor = textColorInvert; // #fff
     const buttonPrimaryHoverBackground = colorVzdBrandHover; // #0071e6
     const buttonPrimaryHoverBorderColor = colorVzdBrandHover;
+    // popover -----------------------------------------------------------------
+    const popoverBackground = bgBody; // #fff
+    const popoverOverlay = color(bgBody).fade(0.25).toString(); // rgba(255, 255, 255, 0.75)
+    const popoverBoxShadow = boxShadowL;
     // rest -----------------------------------------------------------------
+    const chartLegendWidth = `182px`;
+    const sourceFormWidth = `530px`;
+    const customScrollWidth = `7px`;
     const axisControlColor = color(bgSelected).desaturate(0.08).darken(0.27).toString(); // #6fd366
     const progressIndicatorBg = colorVzdBrand; // #007eff
     const progressIndicatorFunc = `cubic-bezier(0.58, 0, 0.81, 1)`;
@@ -234,6 +236,7 @@ function calculateVariables({
         controlsPlaceholderColor,
         controlsHorizontalSpace,
         controlsHorizontalSpaceL,
+        controlsHorizontalSpaceXl,
         controlsBoxShadowFocus,
         controlsBoxShadowFocusError,
         controlsDisabledOpacity,
