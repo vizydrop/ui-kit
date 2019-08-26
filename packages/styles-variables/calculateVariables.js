@@ -270,11 +270,27 @@ function calculateVariables({
     };
 }
 
+function convertThemeToInternalConfig(theme) {
+    const safeTheme = theme || {};
+    return {
+        ...safeTheme.colors,
+        fontFamily: safeTheme.fontFamily,
+    };
+}
+
+function calculateCustomCssProperties(options) {
+    return Object.entries(calculateVariables(options))
+        .map(([key, value]) => [`--vzdrp-${key}`, value])
+        .reduce((customProperties, [key, value]) => ({...customProperties, [key]: value}), {});
+}
+
 module.exports = {
     calculateVariables,
-    calculateCustomCssProperties(options) {
-        return Object.entries(calculateVariables(options))
-            .map(([key, value]) => [`--vzdrp-${key}`, value])
-            .reduce((customProperties, [key, value]) => ({...customProperties, [key]: value}), {});
+    calculateCustomCssProperties,
+    calculateVariablesFromTheme(theme) {
+        return calculateVariables(convertThemeToInternalConfig(theme));
+    },
+    calculateCustomCssPropertiesFromTheme(theme) {
+        return calculateCustomCssProperties(convertThemeToInternalConfig(theme));
     },
 };

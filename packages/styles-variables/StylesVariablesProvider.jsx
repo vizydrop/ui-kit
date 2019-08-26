@@ -1,25 +1,23 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
-import {calculateVariables} from './calculateVariables';
+import {
+    calculateVariablesFromTheme,
+    calculateCustomCssPropertiesFromTheme,
+} from './calculateVariables';
 import StylesVariablesContext from './StylesVariablesContext';
 
-function runVariablesCalculation(theme) {
-    return calculateVariables({
-        ...theme && theme.colors,
-        fontFamily: theme && theme.fontFamily,
-    });
-}
-
 export default function StylesVariablesProvider({theme, children}) {
-    const [stylesVariables, setStylesVariables] = useState(() => runVariablesCalculation(theme));
+    const [stylesVariables, setStylesVariables] = useState(() => calculateVariablesFromTheme(theme));
 
     useEffect(() => {
-        const variables = runVariablesCalculation(theme);
+        const variables = calculateVariablesFromTheme(theme);
         setStylesVariables(variables);
 
+        const cssVariables = calculateCustomCssPropertiesFromTheme(theme);
+
         const root = document.documentElement;
-        Object.entries(variables).forEach(([key, value]) => {
-            root.style.setProperty(`--vzdrp-${key}`, value);
+        Object.entries(cssVariables).forEach(([key, value]) => {
+            root.style.setProperty(key, value);
         });
     }, [theme, setStylesVariables]);
 

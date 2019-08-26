@@ -1,3 +1,8 @@
+#### 1.3.0
+Add syntax sugar to calculate variables from `theme`
+- `calculateVariablesFromTheme`
+- `calculateCustomCssPropertiesFromTheme`
+
 #### 1.2.0
 Themes support `fontFamily` customization
 
