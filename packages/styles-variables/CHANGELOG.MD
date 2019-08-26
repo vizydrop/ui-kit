@@ -1,3 +1,6 @@
+#### 1.2.0
+Themes support `fontFamily` customization
+
 #### 1.1.1
 Fix that `calculateCustomCssProperties` ignores input parameter 
 

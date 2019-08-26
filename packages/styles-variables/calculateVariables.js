@@ -8,7 +8,7 @@ const defaultColorHighlight = `#a8e8a2`;
 const defaultColorMain = `#007eff`;
 const defaultColorError = `#d51b32`;
 
-const defaultFontFamily = `OpenSans`;
+const defaultFontFamily = `"Open Sans",sans-serif`;
 
 function calculateVariables({
     /* base color */

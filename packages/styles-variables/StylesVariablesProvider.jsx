@@ -4,7 +4,10 @@ import {calculateVariables} from './calculateVariables';
 import StylesVariablesContext from './StylesVariablesContext';
 
 function runVariablesCalculation(theme) {
-    return calculateVariables((theme && theme.colors) || {});
+    return calculateVariables({
+        ...theme && theme.colors,
+        fontFamily: theme && theme.fontFamily,
+    });
 }
 
 export default function StylesVariablesProvider({theme, children}) {
