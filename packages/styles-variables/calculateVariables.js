@@ -1,16 +1,16 @@
-const color = require(`color`);
+import color from 'color';
 
 // colors (!!! don't use them directly, use semantic variables) -
-const defaultColorContent = `#000`;
-const defaultColorContentInvert = `#fff`;
-const defaultColorBody = `#fff`;
-const defaultColorHighlight = `#a8e8a2`;
-const defaultColorMain = `#007eff`;
-const defaultColorError = `#d51b32`;
+export const defaultColorContent = `#000`;
+export const defaultColorContentInvert = `#fff`;
+export const defaultColorBody = `#fff`;
+export const defaultColorHighlight = `#a8e8a2`;
+export const defaultColorMain = `#007eff`;
+export const defaultColorError = `#d51b32`;
 
-const defaultFontFamily = `"Open Sans",sans-serif`;
+export const defaultFontFamily = `"Open Sans",sans-serif`;
 
-function calculateVariables({
+export function calculateVariables({
     /* base color */
     colorContent = defaultColorContent,
     colorContentInvert = defaultColorContentInvert,
@@ -270,7 +270,7 @@ function calculateVariables({
     };
 }
 
-function convertThemeToInternalConfig(theme) {
+export function convertThemeToInternalConfig(theme) {
     const safeTheme = theme || {};
     return {
         ...safeTheme.colors,
@@ -278,19 +278,16 @@ function convertThemeToInternalConfig(theme) {
     };
 }
 
-function calculateCustomCssProperties(options) {
+export function calculateCustomCssProperties(options) {
     return Object.entries(calculateVariables(options))
         .map(([key, value]) => [`--vzdrp-${key}`, value])
         .reduce((customProperties, [key, value]) => ({...customProperties, [key]: value}), {});
 }
 
-module.exports = {
-    calculateVariables,
-    calculateCustomCssProperties,
-    calculateVariablesFromTheme(theme) {
-        return calculateVariables(convertThemeToInternalConfig(theme));
-    },
-    calculateCustomCssPropertiesFromTheme(theme) {
-        return calculateCustomCssProperties(convertThemeToInternalConfig(theme));
-    },
-};
+export function calculateVariablesFromTheme(theme) {
+    return calculateVariables(convertThemeToInternalConfig(theme));
+}
+
+export function calculateCustomCssPropertiesFromTheme(theme) {
+    return calculateCustomCssProperties(convertThemeToInternalConfig(theme));
+}

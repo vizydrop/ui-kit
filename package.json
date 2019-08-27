@@ -5,9 +5,11 @@
   "repository": "https://github.com/vizydrop/Vizykit",
   "author": "Vizydrop Team",
   "scripts": {
-    "test": "./node_modules/.bin/lerna run test",
+    "test": "./node_modules/.bin/lerna run test && jest ./storybook.test.js",
     "lint": "./node_modules/.bin/eslint --quiet --ext .js,.jsx ./",
-    "publish:release": "yarn lint && yarn test && ./node_modules/.bin/lerna publish"
+    "publish:release": "yarn lint && yarn test && ./node_modules/.bin/lerna publish",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
@@ -24,14 +26,26 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "7.5.5",
     "@babel/preset-env": "7.5.5",
     "@babel/preset-react": "7.0.0",
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-centered": "^5.1.10",
+    "@storybook/addon-knobs": "^5.1.10",
+    "@storybook/addon-links": "^5.1.11",
+    "@storybook/addon-storyshots": "^5.1.11",
+    "@storybook/addon-viewport": "^5.1.10",
+    "@storybook/addons": "^5.1.11",
+    "@storybook/react": "^5.1.11",
     "@testing-library/jest-dom": "4.0.1",
     "@testing-library/react": "9.1.3",
     "@vizydrop/eslint-config-vizydrop": "5.1.3",
     "babel-jest": "24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-macros": "^2.6.1",
     "copyfiles": "2.1.1",
+    "css-loader": "^3.2.0",
     "eslint": "6.2.1",
     "eslint-config-airbnb": "18.0.1",
     "eslint-plugin-class-property": "1.1.0",
@@ -46,11 +60,17 @@
     "eslint-plugin-react": "7.14.3",
     "eslint-plugin-react-hooks": "1.7.0",
     "husky": "3.0.4",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "24.9.0",
     "lerna": "3.16.4",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
     "prop-types": "15.7.0",
     "react": "16.9.0",
     "react-dom": "16.9.0",
-    "rimraf": "3.0.0"
+    "react-test-renderer": "^16.9.0",
+    "require-context.macro": "^1.1.1",
+    "rimraf": "3.0.0",
+    "style-loader": "^1.0.0"
   }
 }
