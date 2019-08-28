@@ -24,7 +24,6 @@ export const SortIcon = ({direction, color}) => {
 SortIcon.propTypes = {
     color: PropTypes.string,
     direction: PropTypes.oneOf(Object.values(Directions)).isRequired,
-
 };
 
 SortIcon.displayName = `SortIcon`;

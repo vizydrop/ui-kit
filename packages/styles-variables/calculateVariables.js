@@ -286,6 +286,14 @@ function calculateCustomCssProperties(options) {
 }
 
 module.exports = {
+    defaultColorContent,
+    defaultColorContentInvert,
+    defaultColorBody,
+    defaultColorHighlight,
+    defaultColorMain,
+    defaultColorError,
+    defaultFontFamily,
+
     calculateVariables,
     calculateCustomCssProperties,
     calculateVariablesFromTheme(theme) {

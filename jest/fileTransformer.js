@@ -1,5 +1,6 @@
-const {createTransformer} = require(`babel-jest`);
+const macros = require(`babel-plugin-macros`);
 const reactPreset = require(`@babel/preset-react`);
+const {createTransformer} = require(`babel-jest`);
 const transformClassProperties = require(`@babel/plugin-proposal-class-properties`);
 
 module.exports = createTransformer({
@@ -13,6 +14,7 @@ module.exports = createTransformer({
         }],
     ],
     plugins: [
+        macros,
         transformClassProperties,
     ],
 });

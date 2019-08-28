@@ -17,7 +17,8 @@
         ".npmignore",
         ".gitignore",
         "*.md",
-        "*.MD"
+        "*.MD",
+        "*.stories.jsx"
       ],
       "message": "release: publish"
     }
