@@ -5,20 +5,25 @@ import {
     calculateCustomCssPropertiesFromTheme,
 } from './calculateVariables';
 import StylesVariablesContext from './StylesVariablesContext';
+import {isCSSVariablesSupported} from './isCSSVariablesSupported';
 
 export default function StylesVariablesProvider({theme, children}) {
-    const [stylesVariables, setStylesVariables] = useState(() => calculateVariablesFromTheme(theme));
+    const [stylesVariables, setStylesVariables] = useState(() => calculateVariablesFromTheme(
+        isCSSVariablesSupported() ? theme : null,
+    ));
 
     useEffect(() => {
-        const variables = calculateVariablesFromTheme(theme);
-        setStylesVariables(variables);
+        if (isCSSVariablesSupported()) {
+            const variables = calculateVariablesFromTheme(theme);
+            setStylesVariables(variables);
 
-        const cssVariables = calculateCustomCssPropertiesFromTheme(theme);
+            const cssVariables = calculateCustomCssPropertiesFromTheme(theme);
 
-        const root = document.documentElement;
-        Object.entries(cssVariables).forEach(([key, value]) => {
-            root.style.setProperty(key, value);
-        });
+            const root = document.documentElement;
+            Object.entries(cssVariables).forEach(([key, value]) => {
+                root.style.setProperty(key, value);
+            });
+        }
     }, [theme, setStylesVariables]);
 
     return (

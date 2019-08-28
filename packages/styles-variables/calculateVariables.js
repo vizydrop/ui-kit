@@ -8,7 +8,8 @@ const defaultColorHighlight = `#a8e8a2`;
 const defaultColorMain = `#007eff`;
 const defaultColorError = `#d51b32`;
 
-const defaultFontFamily = `"Open Sans",sans-serif`;
+// pass OpenSans specially for TP and IE11.
+const defaultFontFamily = `"Open Sans",OpenSans,sans-serif`;
 
 function calculateVariables({
     /* base color */

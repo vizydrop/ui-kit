@@ -1,3 +1,6 @@
+#### 1.4.0
+Do not apply styles variables if browser does not support CSS variables
+
 #### 1.3.0
 Add syntax sugar to calculate variables from `theme`
 - `calculateVariablesFromTheme`
