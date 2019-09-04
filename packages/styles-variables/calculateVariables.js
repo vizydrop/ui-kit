@@ -7,6 +7,7 @@ const defaultColorBody = `#fff`;
 const defaultColorHighlight = `#a8e8a2`;
 const defaultColorMain = `#007eff`;
 const defaultColorError = `#d51b32`;
+const defaultColorSuccess = `#87cf73`;
 
 // pass OpenSans specially for TP and IE11.
 const defaultFontFamily = `"Open Sans",OpenSans,sans-serif`;
@@ -19,6 +20,7 @@ function calculateVariables({
     colorHighlight = defaultColorHighlight,
     colorMain = defaultColorMain,
     colorError = defaultColorError,
+    colorSuccess = defaultColorSuccess,
     /* fonts */
     fontFamily = defaultFontFamily,
 } = {}) {
@@ -47,7 +49,7 @@ function calculateVariables({
     const textColorInvert = colorContentInvert; // #fff
     const linkColorDefault = colorVzdBrand; // #007eff
     const linkColorHover = colorVzdBrandHover; // #0071e6
-    const textColorSuccess = color(colorHighlight).darken(0.35).toString(); // #40cd33
+    const textColorSuccess = colorSuccess; // #87cf73
     const textColorError = colorError; // #d51b32
     const textColorWarning = colorMain; // #007eff
     const textColorInfo = textColorSecondary; // rgba(0, 0, 0, 0.6)
@@ -64,7 +66,7 @@ function calculateVariables({
     const bgError = color(bgBody).mix(color(textColorError), 0.08).toString(); // #fcedef
     const bgErrorHover = color(bgBody).mix(color(textColorError), 0.12).toString(); // #fae4e6
     const bgWarning = color(bgBody).mix(color(textColorWarning), 0.08).toString(); // #ebf5ff
-    const bgSuccess = color(bgBody).mix(color(bgPlain), 0.1).toString(); // #f6fdf6
+    const bgSuccess = color(bgBody).mix(color(textColorSuccess), 0.15).toString();
     const bgInfo = bgPanel; // #f9f9f9
     // vzd faded colors (for box-shadow for example) ---------------------------------
     const bgMainAlpha = color(colorMain).fade(0.9).toString();
@@ -158,6 +160,7 @@ function calculateVariables({
         colorMain,
         colorHighlight,
         colorError,
+        colorSuccess,
         colorVzdBrand,
         colorVzdBrandHover,
         spaceXxl,
