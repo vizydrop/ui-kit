@@ -18,7 +18,8 @@
         ".gitignore",
         "*.md",
         "*.MD",
-        "*.stories.jsx"
+        "*.stories.jsx",
+        "*.stories.less"
       ],
       "message": "release: publish"
     }
