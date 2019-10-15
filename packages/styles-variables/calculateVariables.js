@@ -25,13 +25,13 @@ function calculateVariables({
     fontFamily = defaultFontFamily,
 } = {}) {
     const controlsHeightPx = 28;
-    const spaceSPx = 8;
-    const spaceXsPx = 4;
     const borderRadiusPx = 3;
     // SEMANTIC VARIABLES -----------------------------------
     // vzd Colors -------------------------------------------
     const colorVzdBrand = colorMain;
-    const colorVzdBrandHover = color(colorVzdBrand).darken(0.1).toString(); // #0071e6
+    const colorVzdBrandHover = color(colorVzdBrand)
+        .darken(0.1)
+        .toString(); // #0071e6
     // vzd fonts -------------------------------------------
     const fontSizeS = `11px`;
     const fontSizeM = `13px`;
@@ -44,8 +44,12 @@ function calculateVariables({
     const fontFamilyCode = `Roboto Mono, monospace`;
     // vzd text colors ---------------------------------------
     const textColor = colorContent;
-    const textColorSecondary = color(colorContent).fade(0.4).toString(); // rgba(0, 0, 0, 0.6)
-    const textColorTertiary = color(colorContent).fade(0.64).toString(); // rgba(0, 0, 0, 0.36)
+    const textColorSecondary = color(colorContent)
+        .fade(0.4)
+        .toString(); // rgba(0, 0, 0, 0.6)
+    const textColorTertiary = color(colorContent)
+        .fade(0.64)
+        .toString(); // rgba(0, 0, 0, 0.36)
     const textColorInvert = colorContentInvert; // #fff
     const linkColorDefault = colorVzdBrand; // #007eff
     const linkColorHover = colorVzdBrandHover; // #0071e6
@@ -55,30 +59,62 @@ function calculateVariables({
     const textColorInfo = textColorSecondary; // rgba(0, 0, 0, 0.6)
     // vzd backgrounds ---------------------------------------
     const bgBody = colorBody; // #fff
-    const bgBodyEndGradient = color(colorBody).fade(1).toString(); // transparent
+    const bgBodyEndGradient = color(colorBody)
+        .fade(1)
+        .toString(); // transparent
     const bgVzdBrand = colorVzdBrand; // #007eff
-    const bgVzdBrandLight = color(bgBody).mix(color(colorVzdBrand), 0.05).toString(); // #f2f9ff
+    const bgVzdBrandLight = color(bgBody)
+        .mix(color(colorVzdBrand), 0.05)
+        .toString(); // #f2f9ff
     const bgPlain = colorHighlight; // #a8e8a2
-    const bgPanel = color(colorBody).mix(color(colorContent), 0.025).toString(); // #f9f9f9
-    const bgObject = color(colorBody).mix(color(colorContent), 0.06).toString(); // #f0f0f0
-    const bgSelected = color(colorBody).mix(color(bgPlain), 0.7).toString(); // #c2efbe
-    const bgHover = color(bgBody).mix(color(bgPlain), 0.3).toString(); // #e5f8e3
-    const bgError = color(bgBody).mix(color(textColorError), 0.08).toString(); // #fcedef
-    const bgErrorHover = color(bgBody).mix(color(textColorError), 0.12).toString(); // #fae4e6
-    const bgWarning = color(bgBody).mix(color(textColorWarning), 0.08).toString(); // #ebf5ff
-    const bgSuccess = color(bgBody).mix(color(textColorSuccess), 0.15).toString();
+    const bgPanel = color(colorBody)
+        .mix(color(colorContent), 0.025)
+        .toString(); // #f9f9f9
+    const bgObject = color(colorBody)
+        .mix(color(colorContent), 0.06)
+        .toString(); // #f0f0f0
+    const bgSelected = color(colorBody)
+        .mix(color(bgPlain), 0.7)
+        .toString(); // #c2efbe
+    const bgHover = color(bgBody)
+        .mix(color(bgPlain), 0.3)
+        .toString(); // #e5f8e3
+    const bgError = color(bgBody)
+        .mix(color(textColorError), 0.08)
+        .toString(); // #fcedef
+    const bgErrorHover = color(bgBody)
+        .mix(color(textColorError), 0.12)
+        .toString(); // #fae4e6
+    const bgWarning = color(bgBody)
+        .mix(color(textColorWarning), 0.08)
+        .toString(); // #ebf5ff
+    const bgSuccess = color(bgBody)
+        .mix(color(textColorSuccess), 0.15)
+        .toString();
     const bgInfo = bgPanel; // #f9f9f9
     // vzd faded colors (for box-shadow for example) ---------------------------------
-    const bgMainAlpha = color(colorMain).fade(0.9).toString();
-    const bgErrorAlpha = color(colorError).fade(0.9).toString();
+    const bgMainAlpha = color(colorMain)
+        .fade(0.9)
+        .toString();
+    const bgErrorAlpha = color(colorError)
+        .fade(0.9)
+        .toString();
     // vzd spaces, breakpoints -------------------------------------------
-    const spaceXxl = `48px`;
-    const spaceXl = `32px`;
-    const spaceLx = `24px`;
-    const spaceL = `20px`;
-    const spaceM = `16px`;
-    const spaceSm = `12px`;
+    const spaceXxlPx = 48;
+    const spaceXxl = `${spaceXxlPx}px`;
+    const spaceXlPx = 32;
+    const spaceXl = `${spaceXlPx}px`;
+    const spaceLxPx = 24;
+    const spaceLx = `${spaceLxPx}px`;
+    const spaceLPx = 20;
+    const spaceL = `${spaceLPx}px`;
+    const spaceMPx = 16;
+    const spaceM = `${spaceMPx}px`;
+    const spaceSmPx = 12;
+    const spaceSm = `${spaceSmPx}px`;
+    const spaceSPx = 8;
     const spaceS = `${spaceSPx}px`;
+    const spaceXsPx = 4;
     const spaceXs = `${spaceXsPx}px`;
     const breakpointXl = `1920px`;
     const breakpointLx = `1440px`;
@@ -90,8 +126,12 @@ function calculateVariables({
     // borders, border-radius ---------------------------------------------
     const borderRadius = `${borderRadiusPx}px`;
     const borderRadiusL = `6px`;
-    const borderColor = color(colorContent).fade(0.92).toString(); // rgba(0, 0, 0, 0.08)
-    const borderColorSecondary = color(colorContent).fade(0.96).toString(); // rgba(0, 0, 0, 0.04)
+    const borderColor = color(colorContent)
+        .fade(0.92)
+        .toString(); // rgba(0, 0, 0, 0.08)
+    const borderColorSecondary = color(colorContent)
+        .fade(0.96)
+        .toString(); // rgba(0, 0, 0, 0.04)
     // box-shadows --------------------------------------------------------
     const boxShadowXS = `0 3px 5px rgba(0, 0, 0, 0.05)`;
     const boxShadowS = `0 5px 6px rgba(0, 0, 0, 0.05)`;
@@ -104,7 +144,9 @@ function calculateVariables({
     const iconColorDefault = textColor; // #000
     const iconColorSecondary = textColorSecondary; // rgba(0, 0, 0, 0.6)
     const iconColorTertiary = textColorTertiary; // rgba(0, 0, 0, 0.36)
-    const iconColorLight = color(colorContent).fade(0.92).toString(); // rgba(0, 0, 0, 0.08)
+    const iconColorLight = color(colorContent)
+        .fade(0.92)
+        .toString(); // rgba(0, 0, 0, 0.08)
     const iconActionOpacity = `0.4`;
     // controls ------------------------------------------------------------
     const controlsBoxShadowFocus = `0 0 0 3px ${bgMainAlpha}`;
@@ -117,10 +159,18 @@ function calculateVariables({
     const controlsTextColor = textColor; // #000
     const controlsBg = bgBody; // #fff
     const controlsBorderRadius = borderRadius;
-    const controlsBorderColor = color(colorContent).fade(0.84).toString(); // rgba(0, 0, 0, 0.16)
-    const controlsBorderColorHover = color(colorContent).fade(0.82).toString(); // rgba(0, 0, 0, 0.18)
-    const controlsBorderColorFocus = color(colorContent).fade(0.82).toString(); // rgba(0, 0, 0, 0.18)
-    const controlsPlaceholderColor = color(colorContent).fade(0.6).toString(); // rgba(0, 0, 0, 0.4)
+    const controlsBorderColor = color(colorContent)
+        .fade(0.84)
+        .toString(); // rgba(0, 0, 0, 0.16)
+    const controlsBorderColorHover = color(colorContent)
+        .fade(0.82)
+        .toString(); // rgba(0, 0, 0, 0.18)
+    const controlsBorderColorFocus = color(colorContent)
+        .fade(0.82)
+        .toString(); // rgba(0, 0, 0, 0.18)
+    const controlsPlaceholderColor = color(colorContent)
+        .fade(0.6)
+        .toString(); // rgba(0, 0, 0, 0.4)
     const controlsHorizontalSpace = spaceXs;
     const controlsHorizontalSpaceL = spaceS;
     const controlsHorizontalSpaceXl = spaceL;
@@ -139,13 +189,18 @@ function calculateVariables({
     const buttonPrimaryHoverBorderColor = colorVzdBrandHover;
     // popover -----------------------------------------------------------------
     const popoverBackground = bgBody; // #fff
-    const popoverOverlay = color(bgBody).fade(0.25).toString(); // rgba(255, 255, 255, 0.75)
+    const popoverOverlay = color(bgBody)
+        .fade(0.25)
+        .toString(); // rgba(255, 255, 255, 0.75)
     const popoverBoxShadow = boxShadowL;
     // rest -----------------------------------------------------------------
     const chartLegendWidth = `182px`;
     const sourceFormWidth = `530px`;
     const customScrollWidth = `7px`;
-    const axisControlColor = color(bgSelected).desaturate(0.08).darken(0.27).toString(); // #6fd366
+    const axisControlColor = color(bgSelected)
+        .desaturate(0.08)
+        .darken(0.27)
+        .toString(); // #6fd366
     const progressIndicatorBg = colorVzdBrand; // #007eff
     const progressIndicatorFunc = `cubic-bezier(0.58, 0, 0.81, 1)`;
     const chartEditorAxisWidth = `${controlsHeightPx + spaceSPx * 2 + 2}px`;
@@ -153,7 +208,6 @@ function calculateVariables({
     return {
         controlsHeightPx,
         borderRadiusPx,
-        spaceXsPx,
         colorContent,
         colorContentInvert,
         colorBody,
@@ -163,14 +217,21 @@ function calculateVariables({
         colorSuccess,
         colorVzdBrand,
         colorVzdBrandHover,
+        spaceXxlPx,
         spaceXxl,
+        spaceXlPx,
         spaceXl,
+        spaceLxPx,
         spaceLx,
+        spaceLPx,
         spaceL,
+        spaceMPx,
         spaceM,
+        spaceSmPx,
         spaceSm,
-        spaceS,
         spaceSPx,
+        spaceS,
+        spaceXsPx,
         spaceXs,
         fontFamily,
         fontFamilyCode,
@@ -285,7 +346,13 @@ function convertThemeToInternalConfig(theme) {
 function calculateCustomCssProperties(options) {
     return Object.entries(calculateVariables(options))
         .map(([key, value]) => [`--vzdrp-${key}`, value])
-        .reduce((customProperties, [key, value]) => ({...customProperties, [key]: value}), {});
+        .reduce(
+            (customProperties, [key, value]) => ({
+                ...customProperties,
+                [key]: value,
+            }),
+            {},
+        );
 }
 
 module.exports = {
