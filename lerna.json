@@ -19,7 +19,8 @@
         "*.md",
         "*.MD",
         "*.stories.jsx",
-        "*.stories.less"
+        "*.stories.less",
+        ".eslintignore"
       ],
       "message": "release: publish"
     }

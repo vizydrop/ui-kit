@@ -314,7 +314,11 @@ storiesOf(`Icons|All`, module)
             </div>
             <div>
                 <ChartBarIcon />
-                <span>ChartBarIcon</span>
+                <span>ChartBarIcon (Medium - Default)</span>
+            </div>
+            <div>
+                <ChartBarIcon size="s" />
+                <span>ChartBarIcon (Small)</span>
             </div>
             <div>
                 <ChartFallbackIcon />

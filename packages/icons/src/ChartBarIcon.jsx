@@ -2,8 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import useStylesVariables from '@vizydrop/styles-variables/useStylesVariables';
 
-export const ChartBarIcon = ({color}) => {
+
+export const ChartBarIcon = ({color, size}) => {
     const {iconColorDefault} = useStylesVariables();
+
+    if (size === `s`) {
+        return (
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{display: `block`}}>
+                <path fill={color || iconColorDefault} fillRule="evenodd" clipRule="evenodd" d="M4 2C4.55228 2 5 2.44772 5 3L5 13C5 13.5523 4.55229 14 4 14C3.44772 14 3 13.5523 3 13L3 3C3 2.44772 3.44772 2 4 2Z" />
+                <path fill={color || iconColorDefault} fillRule="evenodd" clipRule="evenodd" d="M8 7C8.55228 7 9 7.44772 9 8V13C9 13.5523 8.55229 14 8 14C7.44772 14 7 13.5523 7 13V8C7 7.44772 7.44772 7 8 7Z" />
+                <path fill={color || iconColorDefault} fillRule="evenodd" clipRule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13V5C11 4.44772 11.4477 4 12 4Z" />
+            </svg>
+        );
+    }
 
     return (
         <svg width="32" height="22" viewBox="0 0 32 22" version="1.1" style={{display: `block`}}>
@@ -16,4 +27,9 @@ ChartBarIcon.displayName = `ChartBarIcon`;
 
 ChartBarIcon.propTypes = {
     color: PropTypes.string,
+    size: PropTypes.oneOf([`s`, `m`]),
+};
+
+ChartBarIcon.defaultProps = {
+    size: `m`,
 };
