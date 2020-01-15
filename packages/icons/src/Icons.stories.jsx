@@ -61,6 +61,7 @@ import {SortIcon} from './SortIcon';
 import {TeamIcon} from './TeamIcon';
 import {UpgradeIcon} from './UpgradeIcon';
 import {WarningIcon} from './WarningIcon';
+import {LegendIcon} from './LegendIcon';
 
 import styles from './Icons.stories.less';
 
@@ -339,6 +340,10 @@ storiesOf(`Icons|All`, module)
             <div>
                 <ChartStackedBarIcon />
                 <span>ChartStackedBarIcon</span>
+            </div>
+            <div>
+                <LegendIcon />
+                <span>LegendIcon</span>
             </div>
         </div>
     ));

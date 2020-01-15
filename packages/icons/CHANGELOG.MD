@@ -1,3 +1,6 @@
+#### 1.4.0
+LegendIcon
+
 #### 1.3.0
 Update FeedbackIcon
 

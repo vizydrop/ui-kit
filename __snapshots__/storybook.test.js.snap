@@ -1763,6 +1763,47 @@ exports[`Storyshots Icons|All default 1`] = `
           ChartStackedBarIcon
         </span>
       </div>
+      <div>
+        <svg
+          height="16"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+          version="1.1"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <circle
+            cx="3.91309"
+            cy="4"
+            fill="#F6E652"
+            r="3"
+          />
+          <circle
+            cx="11.9131"
+            cy="4"
+            fill="#8ED2FD"
+            r="3"
+          />
+          <circle
+            cx="3.91309"
+            cy="12"
+            fill="#F06E4A"
+            r="3"
+          />
+          <circle
+            cx="11.9131"
+            cy="12"
+            fill="#BDD3A9"
+            r="3"
+          />
+        </svg>
+        <span>
+          LegendIcon
+        </span>
+      </div>
     </div>
   </div>
 </div>
