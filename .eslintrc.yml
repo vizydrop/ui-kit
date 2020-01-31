@@ -11,3 +11,5 @@ rules:
   react/button-has-type: 1
   react-hooks/rules-of-hooks: 2
   react-hooks/exhaustive-deps: 2
+  node/no-unpublished-require: off
+  react/jsx-props-no-spreading: off
