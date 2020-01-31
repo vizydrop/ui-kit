@@ -63,6 +63,7 @@ import { WarningIcon } from "./WarningIcon";
 import { LegendIcon } from "./LegendIcon";
 
 import styles from "./Icons.stories.less";
+import { PinnedIcon } from "./PinnedIcon";
 
 export default {
   title: `Icons`
@@ -346,6 +347,10 @@ export const all = () => (
     <div>
       <LegendIcon />
       <span>LegendIcon</span>
+    </div>
+    <div>
+      <PinnedIcon />
+      <span>PinnedIcon</span>
     </div>
   </div>
 );
