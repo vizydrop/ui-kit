@@ -1,3 +1,6 @@
+#### 1.5.0
+MetricIcon
+
 #### 1.4.0
 LegendIcon
 

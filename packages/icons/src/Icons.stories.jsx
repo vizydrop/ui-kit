@@ -64,6 +64,7 @@ import { LegendIcon } from "./LegendIcon";
 
 import styles from "./Icons.stories.less";
 import { PinnedIcon } from "./PinnedIcon";
+import {MetricIcon} from "./MetricIcon";
 
 export default {
   title: `Icons`
@@ -351,6 +352,10 @@ export const all = () => (
     <div>
       <PinnedIcon />
       <span>PinnedIcon</span>
+    </div>
+    <div>
+      <MetricIcon />
+      <span>MetricIcon</span>
     </div>
   </div>
 );
