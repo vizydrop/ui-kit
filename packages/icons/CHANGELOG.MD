@@ -1,3 +1,6 @@
+#### 1.7.0
+PieChartIcon
+
 #### 1.6.0
 MetricIcon
 
