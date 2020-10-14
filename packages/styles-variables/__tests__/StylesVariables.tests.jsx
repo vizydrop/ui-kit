@@ -5,11 +5,12 @@ import StylesVariablesProvider from '../StylesVariablesProvider';
 import useStylesVariables from '../useStylesVariables';
 
 const Component = () => {
-    const {colorMain, fontFamily} = useStylesVariables();
+    const {colorMain, fontFamily, fontSizeM} = useStylesVariables();
     return (
         <div>
             <div>{colorMain}</div>
             <div>{fontFamily}</div>
+            <div>{fontSizeM}</div>
         </div>
     );
 };
@@ -36,14 +37,17 @@ describe(`styles variables`, () => {
             const theme = {
                 colors: {colorMain: `#001122`},
                 fontFamily: `customfont`,
+                fontSizeM: `14px`,
             };
             const {queryByText} = render(
                 <StylesVariablesProvider theme={theme}>
                     <Component />
                 </StylesVariablesProvider>,
             );
+
             expect(queryByText(`#001122`)).toBeInTheDocument();
             expect(queryByText(`customfont`)).toBeInTheDocument();
+            expect(queryByText(`14px`)).toBeInTheDocument();
         });
     });
 
@@ -52,6 +56,7 @@ describe(`styles variables`, () => {
             const {queryByText} = render(<Component />);
             expect(queryByText(`#007eff`)).toBeInTheDocument();
             expect(queryByText(`"Open Sans",OpenSans,sans-serif`)).toBeInTheDocument();
+            expect(queryByText(`13px`)).toBeInTheDocument();
         });
 
         it(`should NOT apply values from context because CSS variables are not supported`, () => {
@@ -66,6 +71,7 @@ describe(`styles variables`, () => {
             );
             expect(queryByText(`#007eff`)).toBeInTheDocument();
             expect(queryByText(`"Open Sans",OpenSans,sans-serif`)).toBeInTheDocument();
+            expect(queryByText(`13px`)).toBeInTheDocument();
         });
     });
 });

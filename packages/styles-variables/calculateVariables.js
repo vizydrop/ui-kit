@@ -12,6 +12,8 @@ const defaultColorSuccess = `#87cf73`;
 // pass OpenSans specially for TP and IE11.
 const defaultFontFamily = `"Open Sans",OpenSans,sans-serif`;
 
+const defaultFontSizeM = `13px`;
+
 function calculateVariables({
     /* base color */
     colorContent = defaultColorContent,
@@ -23,6 +25,7 @@ function calculateVariables({
     colorSuccess = defaultColorSuccess,
     /* fonts */
     fontFamily = defaultFontFamily,
+    fontSizeM = defaultFontSizeM,
 } = {}) {
     const controlsHeightPx = 28;
     const borderRadiusPx = 3;
@@ -34,7 +37,6 @@ function calculateVariables({
         .toString(); // #0071e6
     // vzd fonts -------------------------------------------
     const fontSizeS = `11px`;
-    const fontSizeM = `13px`;
     const fontSizeL = `16px`;
     const fontSizeXl = `22px`;
     const fontSizeXxl = `26px`;
@@ -340,6 +342,7 @@ function convertThemeToInternalConfig(theme) {
     return {
         ...safeTheme.colors,
         fontFamily: safeTheme.fontFamily,
+        fontSizeM: safeTheme.fontSizeM,
     };
 }
 
