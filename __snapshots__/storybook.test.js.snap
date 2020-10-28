@@ -1362,14 +1362,9 @@ exports[`Storyshots Icons All 1`] = `
   <div>
     <svg
       fill="none"
-      height="83"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      height={83}
       viewBox="0 0 86 83"
-      width="86"
+      width={86}
     >
       <path
         d="M41.913 50.9736C41.913 44.7393 46.8514 45.1299 47.8504 39.8018C48.8494 34.4736 45.8504 31.9736 41.913 31.9736C37.9756 31.9736 35.9756 34.9736 35.9756 38.8018"

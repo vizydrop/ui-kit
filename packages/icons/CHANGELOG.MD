@@ -1,3 +1,6 @@
+#### 1.8.0
+Allow set size for AskIcon
+
 #### 1.7.0
 PieChartIcon
 
