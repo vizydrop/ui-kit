@@ -1,3 +1,6 @@
+#### 1.8.2
+fix package
+
 #### 1.8.1
 fix set size for AskIcon
 
