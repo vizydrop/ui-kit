@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import useStylesVariables from '@vizydrop/styles-variables/useStylesVariables';
 
-export const AskIcon = ({color, width = 86, height = 83} = {}) => {
+export const AskIcon = ({color, className, width = 86, height = 83} = {}) => {
     const {iconColorDefault} = useStylesVariables();
 
     return (
-        <svg width={width} height={height} viewBox="0 0 86 83" fill="none">
+        <svg className={className} width={width} height={height} viewBox="0 0 86 83" fill="none">
             <path
                 d="M41.913 50.9736C41.913 44.7393 46.8514 45.1299 47.8504 39.8018C48.8494 34.4736 45.8504 31.9736 41.913 31.9736C37.9756 31.9736 35.9756 34.9736 35.9756 38.8018"
                 stroke={color || iconColorDefault} strokeWidth="3" strokeLinecap="round"/>
@@ -34,4 +34,5 @@ AskIcon.propTypes = {
     width: PropTypes.number,
     height: PropTypes.number,
     color: PropTypes.string,
+    className: PropTypes.string,
 };

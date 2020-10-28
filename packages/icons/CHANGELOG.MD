@@ -1,3 +1,6 @@
+#### 1.9.0
+Allow pass className for AskIcon
+
 #### 1.8.2
 fix package
 
