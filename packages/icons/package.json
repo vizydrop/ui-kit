@@ -18,7 +18,7 @@
     "react": "^16.8.0"
   },
   "devDependencies": {
-    "@vizydrop/styles-variables": "^1.6.0"
+    "@vizydrop/styles-variables": "^1.7.1"
   },
   "publishConfig": {
     "access": "public",
